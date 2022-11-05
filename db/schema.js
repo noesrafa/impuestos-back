@@ -7,14 +7,15 @@ const typeDefs = gql`
   }
 
   type Analisis {
-    id: ID
-    mes: String
-    ingresosTotales: Float
+    id: ID!
+    mes: String!
+    year: Int!
+    ingresosTotales: Float!
     gastosTotales: Float!
-    isr: Float
-    iva: Float
-    isrRetenido: Float
-    ivaRetenido: Float
+    isr: Float!
+    iva: Float!
+    isrRetenido: Float!
+    ivaRetenido: Float!
   }
   
   type Token {
@@ -32,12 +33,13 @@ const typeDefs = gql`
 
   input AnalisisInput {
     mes: String!
+    year: Int!
     ingresosTotales: Float!
     gastosTotales: Float!
-    isr: Float
-    iva: Float
-    isrRetenido: Float
-    ivaRetenido: Float
+    isr: Float!
+    iva: Float!
+    isrRetenido: Float!
+    ivaRetenido: Float!
   }
 
   type Mutation {
@@ -45,6 +47,7 @@ const typeDefs = gql`
     authUser(input: AuthInput): Token
     nuevoAnalisis(input: AnalisisInput): Analisis
   }
+
 
 
 `;

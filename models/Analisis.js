@@ -9,6 +9,13 @@ const AnalisisSchema = mongoose.Schema({
     type: String,
     required: true,
     trim: true,
+    unique: false
+  },
+  year: {
+    type: Number,
+    required: true,
+    trim: true,
+    unique: false
   },
   ingresosTotales: {
     type: Number,
